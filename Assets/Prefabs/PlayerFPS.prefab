@@ -199,7 +199,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  gravity: -9.81
+  gravity: -90.81
   groundDistance: 0.4
   jumpHeight: 3
 --- !u!1 &4285103986480079069
