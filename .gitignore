@@ -49,6 +49,9 @@ ExportedObj/
 *.mdb.meta
 *.cs.meta
 *.png.meta
+*.unity.meta
+*.blend1
+*.blend1.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
