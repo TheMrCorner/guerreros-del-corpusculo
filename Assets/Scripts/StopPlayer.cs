@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class StopPlayer : MonoBehaviour
 {
-    PlayerMovement player; 
+    PlayerMovement player;
+    MouseLook mouse; 
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,7 +16,14 @@ public class StopPlayer : MonoBehaviour
     {
 
         if (player != null && Input.GetKeyUp(KeyCode.E))
+        {
             player.enabled = !player.enabled;
 
+            if (!player.enabled)
+                Cursor.lockState = CursorLockMode.Confined;
+
+            else
+                Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }

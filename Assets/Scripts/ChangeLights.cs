@@ -21,12 +21,6 @@ public class ChangeLights : MonoBehaviour
         for (int i = 0; i < colorLights.Length; i++)
             colorLights[i].enabled = false;
 
-        /*for (int i = 0; i < movingPieces.Length; i++)
-        {
-            rotators[i] = movingPieces[i].GetComponent<RotateOnDrag>();
-            movers[i] = movingPieces[i].GetComponent<DragOnClick>();
-            movers[i].enabled = false;
-        }*/
         for (int i = 0; i < movers.Length; i++)
         {
             movers[i].enabled = false;

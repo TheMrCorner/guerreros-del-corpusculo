@@ -7,10 +7,12 @@ public class MouseLook : MonoBehaviour
     public float Sensibilidad = 100;
     public Transform playerBody;
     public float xRotacion;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
+
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * Sensibilidad * Time.deltaTime;
