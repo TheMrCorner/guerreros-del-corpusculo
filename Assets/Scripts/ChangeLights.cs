@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ChangeLights : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject[] movingPieces;
+    private DragOnClick[] movers;
+    private RotateOnDrag[] rotators;
 
     public Light lightSol;
     public Light[] colorLights;
-
-    bool darLuz; 
 
     void Start()
     {
@@ -17,7 +19,11 @@ public class ChangeLights : MonoBehaviour
         for (int i = 0; i < colorLights.Length; i++)
             colorLights[i].enabled = false;
 
-        darLuz = false; 
+        for (int i = 0; i < movingPieces.Length; i++)
+        {
+            rotators[i] = movingPieces[i].GetComponent<RotateOnDrag>();
+            movers[i] = movingPieces[i].GetComponent<DragOnClick>();
+        }
     }
 
     void OnTriggerStay(Collider other)
@@ -28,6 +34,21 @@ public class ChangeLights : MonoBehaviour
 
             for (int i = 0; i < colorLights.Length; i++)
                 colorLights[i].enabled = !colorLights[i].enabled; 
+
+            if (lightSol.enabled)
+            {
+                foreach (RotateOnDrag rotator in rotators)
+                    rotator.enabled = true;
+                foreach (DragOnClick mover in movers)
+                    mover.enabled = false;
+            }
+            else
+            {
+                foreach (RotateOnDrag rotator in rotators)
+                    rotator.enabled = false;
+                foreach (DragOnClick mover in movers)
+                    mover.enabled = true;
+            }
         }
     }
 }
