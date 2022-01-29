@@ -19,6 +19,7 @@ public class Activable : MonoBehaviour
         rend.material.SetFloat("outline float", scale);
         rend.shadowCastingMode= UnityEngine.Rendering.ShadowCastingMode.Off;
 
+
         g.GetComponent<Activable>().enabled= false;
         g.GetComponent<Collider>().enabled= false;
 
