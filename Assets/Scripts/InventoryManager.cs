@@ -33,6 +33,17 @@ public class InventoryManager : MonoBehaviour
 
         return i<mObjects_.Count;
     }
+
+    public string print(){
+       
+       string list=""; 
+        for(int i=0; i<mObjects_.Count; i++){
+           list+=mObjects_.ToArray()[i] + "\n";
+            Debug.Log(mObjects_.ToArray()[i] + " ");
+        }
+
+        return list; 
+    }
     
 
 }

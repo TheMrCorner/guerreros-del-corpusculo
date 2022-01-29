@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     InventoryManager mInventory_;
+    UIManager mUIManager_;
+
    private static GameManager instance;
     public static GameManager getInstance() {  return instance;}
     private int stage; //indice del nivel
@@ -22,6 +24,11 @@ public class GameManager : MonoBehaviour
         stage = 0;
     }
     
+    public void setUI(UIManager ui){
+        mUIManager_=ui;
+        mUIManager_.init();
+    }
+
     public void setInventory(InventoryManager inv){
         mInventory_= inv;
     }
@@ -35,5 +42,8 @@ public class GameManager : MonoBehaviour
         if(mInventory_!=null){
             mInventory_.removeObject(id);
         }
+    }
+    public string printInventory(){
+       return mInventory_.print();
     }
 }
