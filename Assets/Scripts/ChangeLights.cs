@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ChangeLights : MonoBehaviour
 {
+    //[SerializeField]
+    //private GameObject[] movingPieces;
     [SerializeField]
-    private GameObject[] movingPieces;
     private DragOnClick[] movers;
+    [SerializeField]
     private RotateOnDrag[] rotators;
 
     public Light lightSol;
@@ -19,10 +21,15 @@ public class ChangeLights : MonoBehaviour
         for (int i = 0; i < colorLights.Length; i++)
             colorLights[i].enabled = false;
 
-        for (int i = 0; i < movingPieces.Length; i++)
+        /*for (int i = 0; i < movingPieces.Length; i++)
         {
             rotators[i] = movingPieces[i].GetComponent<RotateOnDrag>();
             movers[i] = movingPieces[i].GetComponent<DragOnClick>();
+            movers[i].enabled = false;
+        }*/
+        for (int i = 0; i < movers.Length; i++)
+        {
+            movers[i].enabled = false;
         }
     }
 
