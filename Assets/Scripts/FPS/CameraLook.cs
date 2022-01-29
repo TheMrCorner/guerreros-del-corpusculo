@@ -21,8 +21,8 @@ namespace FPS
         // Start is called before the first frame update
         void Start()
         {
+            Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Confined;
-            Cursor.lockState = CursorLockMode.Locked;
         } // Start
 
         // Update is called once per frame
