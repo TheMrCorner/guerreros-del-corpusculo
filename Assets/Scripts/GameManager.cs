@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
             mInventory_.removeObject(id);
         }
     }
+
+    public bool hasObject(string s){
+        return mInventory_!=null && mInventory_.hasObject(s);
+    }
     public string printInventory(){
        return mInventory_.print();
     }
