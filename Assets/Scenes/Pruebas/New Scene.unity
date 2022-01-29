@@ -439,35 +439,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.52
+      value: -6.48
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8201637
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.01
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.030059919
+      value: 0.03021526
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.005080944
+      value: -0.0058441
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.99921113
+      value: 0.9995263
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.025451558
+      value: -0.00017666467
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 2.898
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4558616469101610300, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -480,6 +480,14 @@ PrefabInstance:
     - target: {fileID: 4789303235531600834, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
       propertyPath: m_Name
       value: Foco
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433364438943787327, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
+      propertyPath: m_Intensity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433364438943787327, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
+      propertyPath: m_SpotAngle
+      value: 69.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7192734961247331866, guid: a3616ee35b2d45947847692dae69e7d0, type: 3}
