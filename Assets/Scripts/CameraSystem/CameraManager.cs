@@ -5,11 +5,19 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     public MonoBehaviour PlayerController;
-    public GameObject PlayerCamera; 
+    public GameObject PlayerCamera;
+    public MeshRenderer PlayerMesh;
 
     private GameObject staticCameraOnUse;
 
     private bool staticCamera = false;
+    public bool disablePlayerMeshOnCameraChange = true;
+
+    public void Awake()
+    {
+        staticCamera = false;
+        switchToPlayerCamera();
+    }
     public void switchToStaticCamera(GameObject newCamera)
     {
         PlayerController.enabled = false;
@@ -22,6 +30,10 @@ public class CameraManager : MonoBehaviour
         staticCameraOnUse.GetComponent<AudioListener>().enabled = true;
 
         staticCamera = true;
+        if (disablePlayerMeshOnCameraChange)
+        {
+            PlayerMesh.enabled = false;
+        }
     }
 
     public void switchToPlayerCamera()
@@ -35,6 +47,11 @@ public class CameraManager : MonoBehaviour
         PlayerController.enabled = true;
 
         staticCamera = false;
+
+        if (disablePlayerMeshOnCameraChange)
+        {
+            PlayerMesh.enabled = true;
+        }
     }
 
     public bool isStaticCamera()
