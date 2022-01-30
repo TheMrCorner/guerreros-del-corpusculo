@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class ChangeLights : MonoBehaviour
@@ -10,6 +11,8 @@ public class ChangeLights : MonoBehaviour
     private DragOnClick[] movers;
     [SerializeField]
     private RotateOnDrag[] rotators;
+    
+    private CorrectPosition[] positionCheckers;
 
     public Light lightSol;
     public Light[] colorLights;
@@ -24,6 +27,7 @@ public class ChangeLights : MonoBehaviour
         for (int i = 0; i < movers.Length; i++)
         {
             movers[i].enabled = false;
+            positionCheckers[i] = movers[i].gameObject.GetComponent<CorrectPosition>();
         }
     }
 
@@ -54,5 +58,16 @@ public class ChangeLights : MonoBehaviour
                 }
             }
         }
+        int i;
+        bool allCorrect = true;
+        while (i < positionCheckers.Length && allCorrect)
+        {
+            allCorrect = positionCheckers[i].correct;
+                if (allCorrect)
+            Debug.Log(i + "piece(s) in correct position");
+        }
+
+        if (allCorrect)
+            Debug.Log("All pieces in correct position");
     }
 }

@@ -14,6 +14,7 @@ public class CorrectPosition : MonoBehaviour
     private float rotationLenience = 1f;
 
     Transform transform;
+    public bool correct = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +28,12 @@ public class CorrectPosition : MonoBehaviour
         {
             if ((transform.position - t.position).magnitude < positionLenience &&
                 Quaternion.Angle(transform.rotation, t.rotation) < rotationLenience)
-                return true;
+            {
+                return correct = true;
+            }
         }
+        return correct = false;
+    }
 
         return false;
     }
