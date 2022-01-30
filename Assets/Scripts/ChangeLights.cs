@@ -13,7 +13,11 @@ public class ChangeLights : MonoBehaviour
     private RotateOnDrag[] rotators;
     [SerializeField]
     private GameObject door;
-    
+    [SerializeField]
+    private GameObject shadowTemplate;
+    [SerializeField]
+    private GameObject lightTemplate;
+
     private CorrectPosition[] positionCheckers;
 
     public Light lightSol;
@@ -31,7 +35,8 @@ public class ChangeLights : MonoBehaviour
         for (int i = 0; i < movers.Length; i++)
         {
             movers[i].enabled = false;
-
+            if (lightTemplate != null)
+                lightTemplate.SetActive(false);
             //Wenas
 
             GameObject g = movers[i].gameObject; 
@@ -56,6 +61,10 @@ public class ChangeLights : MonoBehaviour
                     rotators[i].enabled = true;
                     movers[i].enabled = false;
                 }
+                if (lightTemplate != null)
+                    lightTemplate.SetActive(false);
+                if (shadowTemplate != null)
+                    shadowTemplate.SetActive(true);
             }
 
             else
@@ -63,8 +72,12 @@ public class ChangeLights : MonoBehaviour
                 for (int i = 0; i < movers.Length; i++)
                 {
                     rotators[i].enabled = false;
-                    movers[i].enabled = true; 
+                    movers[i].enabled = true;
                 }
+                if (lightTemplate != null)
+                    lightTemplate.SetActive(true);
+                if (shadowTemplate != null)
+                    shadowTemplate.SetActive(false);
             }
         }
 
