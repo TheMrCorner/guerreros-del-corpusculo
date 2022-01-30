@@ -126,9 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e854b030e283ddd45bc077c1ba12e01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensibilidad: 100
   playerBody: {fileID: 3197039711031259707}
-  xRotacion: 0
+  mouseSensitivity: 100
 --- !u!1 &3197039711031259708
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +141,7 @@ GameObject:
   - component: {fileID: 3197039711031259705}
   - component: {fileID: 3197039711031259710}
   - component: {fileID: 3197039711031259711}
-  - component: {fileID: 6775972765860655417}
+  - component: {fileID: 7307283250285482742}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -247,7 +246,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6775972765860655417
+--- !u!114 &7307283250285482742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,12 +258,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7156618d286774ba8f7858fd96a3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cc: {fileID: 3197039711031259711}
-  Velocidad: 12
-  Gravedad: -9.81
-  velocity: {x: 0, y: 0, z: 0}
-  groundCheck: {fileID: 6203629996038721063}
-  groundDistance: 0.4
-  floorMask:
+  ctr: {fileID: 0}
+  speed: 12
+  groundCheck: {fileID: 0}
+  groundMask:
     serializedVersion: 2
     m_Bits: 0
+  gravity: -9.81
+  groundDistance: 0.4
+  jumpHeight: 3

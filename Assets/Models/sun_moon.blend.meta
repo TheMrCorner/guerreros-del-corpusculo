@@ -3,7 +3,87 @@ guid: bc96a1b588dc4814f9d74748216ac506
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue light
+    second: {fileID: 2100000, guid: b0dce870060881543b1a3f960b68df8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue light.001
+    second: {fileID: 2100000, guid: d848d65b4cf2f294f8fee16baf035aa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ice
+    second: {fileID: 2100000, guid: 21b2136df22b86943a5d8a082a5f79cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matt
+    second: {fileID: 2100000, guid: 270dc7de311df184a87c2a05793bc034, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matt.002
+    second: {fileID: 2100000, guid: 072790a14a505184a8e0eba6070cf188, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matt.003
+    second: {fileID: 2100000, guid: 9ef9acc0589178f4b9747b4ce2921bee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matt.004
+    second: {fileID: 2100000, guid: 6eaa621561252414faa1c0ede80c29cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matt.005
+    second: {fileID: 2100000, guid: fe30526e0aea2dc48bc2168bebfd29a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matt.006
+    second: {fileID: 2100000, guid: 07f6e00482645644a85d357189b75c8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red light
+    second: {fileID: 2100000, guid: 1d227feae4892994ab90d055738f39b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red light.001
+    second: {fileID: 2100000, guid: 9f9a11250026da542a3afbdf1f485f08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red light.002
+    second: {fileID: 2100000, guid: a40c84bf81665c1448027ce6c9b7ba1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red light.003
+    second: {fileID: 2100000, guid: 62d5085dfa29d4947bdb81d691cf30c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red light.004
+    second: {fileID: 2100000, guid: 38fd8abaeb2661540896ef3bff196bdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red light.005
+    second: {fileID: 2100000, guid: 10a3dca1ca2dd644f80d1cbc456108d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sun
+    second: {fileID: 2100000, guid: eea3a7957206fa64caabcba9e3efa193, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

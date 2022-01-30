@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class RotateOnDrag : MonoBehaviour
 {
-    
-
     private Vector3 screenPoint;
-    private Vector3 offset;
+    private Vector3 rotateAxis;
+    private CorrectPosition correctPosition;
 
-    // actualiza el vector auxiliar y el offset 
-   private void OnMouseDrag() {
-        screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-        transform.Rotate(offset, 0.1f);
+    void Start()
+    {
+        correctPosition = GetComponent<CorrectPosition>();
     }
 
-    
+    // actualiza el vector auxiliar y el offset 
+    private void OnMouseDrag() {
+
+        if (!this.gameObject.GetComponent<DragOnClick>().enabled) {
+            screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
+            rotateAxis = gameObject.transform.position - Camera.main.transform.position;
+            rotateAxis.Normalize();
+
+            if (gameObject.transform.position.x < Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)).x)
+                transform.Rotate(0, 0, 1);
+            else
+                transform.Rotate(0, 0, -1);
+
+            correctPosition.checkPosition();
+        }
+    }
 }
