@@ -20,7 +20,7 @@ public class RotateOnDrag : MonoBehaviour
             screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
             rotateAxis = gameObject.transform.position - Camera.main.transform.position;
 
-            if (gameObject.transform.position.x < Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)));
+            if (gameObject.transform.position.x < Camera.main.ScreenToWorldPoint((new Vector3(Input.mousePosition.x, 0, 0))).x)
                 transform.Rotate(rotateAxis, 1f);
             else
                 transform.Rotate(rotateAxis, -1f);
