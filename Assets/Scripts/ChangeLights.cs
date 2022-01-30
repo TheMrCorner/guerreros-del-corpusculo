@@ -11,6 +11,8 @@ public class ChangeLights : MonoBehaviour
     private DragOnClick[] movers;
     [SerializeField]
     private RotateOnDrag[] rotators;
+    [SerializeField]
+    private GameObject door;
     
     private CorrectPosition[] positionCheckers;
 
@@ -79,5 +81,11 @@ public class ChangeLights : MonoBehaviour
 
         if (allCorrect)
             Debug.Log("All pieces in correct position");
+    }
+
+    void openDoor()
+    {
+        if (door != null)
+            door.SetActive(false);
     }
 }

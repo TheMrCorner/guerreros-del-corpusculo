@@ -19,12 +19,12 @@ public class RotateOnDrag : MonoBehaviour
         if (!this.gameObject.GetComponent<DragOnClick>().enabled) {
             screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
             rotateAxis = gameObject.transform.position - Camera.main.transform.position;
+            rotateAxis.Normalize();
 
-            if (gameObject.transform.position.x < Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)));
-                transform.rotation = Quaternion.Euler(rotateAxis.Normalize()) * Vector3.forward;
+            if (gameObject.transform.position.x < Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)))
+                transform.Rotate(0, 0, 1);
             else
-                transform.rotation = Quaternion.Euler(rotateAxis.Normalize()) * Vector3.back;
-                //transform.Rotate(rotateAxis, -1f);
+                transform.Rotate(0, 0, -1);
 
             correctPosition.checkPosition();
         }
