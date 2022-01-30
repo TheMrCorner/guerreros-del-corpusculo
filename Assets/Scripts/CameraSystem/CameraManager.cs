@@ -38,8 +38,11 @@ public class CameraManager : MonoBehaviour
 
     public void switchToPlayerCamera()
     {
-        staticCameraOnUse.SetActive(false);
-        staticCameraOnUse.GetComponent<AudioListener>().enabled = false;
+        if (staticCameraOnUse != null)
+        {
+            staticCameraOnUse.SetActive(false);
+            staticCameraOnUse.GetComponent<AudioListener>().enabled = false;
+        }
 
         PlayerCamera.SetActive(true);
         PlayerCamera.GetComponent<AudioListener>().enabled = true;
