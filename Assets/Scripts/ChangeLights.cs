@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+//using System.Diagnostics;
 using UnityEngine;
 
 public class ChangeLights : MonoBehaviour
@@ -19,6 +19,8 @@ public class ChangeLights : MonoBehaviour
 
     void Start()
     {
+        positionCheckers = new CorrectPosition[movers.Length]; 
+
         lightSol.enabled = true;
 
         for (int i = 0; i < colorLights.Length; i++)
@@ -27,7 +29,12 @@ public class ChangeLights : MonoBehaviour
         for (int i = 0; i < movers.Length; i++)
         {
             movers[i].enabled = false;
-            positionCheckers[i] = movers[i].gameObject.GetComponent<CorrectPosition>();
+
+            //Wenas
+
+            GameObject g = movers[i].gameObject; 
+
+            positionCheckers[i] = g.GetComponent<CorrectPosition>();
         }
     }
 
@@ -58,13 +65,16 @@ public class ChangeLights : MonoBehaviour
                 }
             }
         }
-        int i;
+
+        int j = 0;
         bool allCorrect = true;
-        while (i < positionCheckers.Length && allCorrect)
+        while (j < positionCheckers.Length && allCorrect)
         {
-            allCorrect = positionCheckers[i].correct;
-                if (allCorrect)
-            Debug.Log(i + "piece(s) in correct position");
+            allCorrect = positionCheckers[j].correct;
+
+            if (allCorrect)
+                Debug.Log("piece(s) in correct position" + j );
+
         }
 
         if (allCorrect)
