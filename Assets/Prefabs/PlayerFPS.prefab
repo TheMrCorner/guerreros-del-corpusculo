@@ -194,11 +194,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ctr: {fileID: 4285103986310448934}
+  cl: {fileID: 4285103985364356673}
   speed: 12
   groundCheck: {fileID: 4285103985802012518}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  uiMan: {fileID: 0}
   gravity: -90.81
   groundDistance: 0.4
   jumpHeight: 3
