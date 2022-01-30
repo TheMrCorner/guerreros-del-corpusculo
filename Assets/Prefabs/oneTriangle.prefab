@@ -558,6 +558,10 @@ GameObject:
   - component: {fileID: 3008751398942008582}
   - component: {fileID: 1098222190543654117}
   - component: {fileID: 6878336880905634254}
+  - component: {fileID: 1848297143193945680}
+  - component: {fileID: 1556610231521855840}
+  - component: {fileID: 1831410465507363305}
+  - component: {fileID: 9113647447454134619}
   m_Layer: 0
   m_Name: Rotating piece blue
   m_TagString: Untagged
@@ -630,6 +634,59 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1848297143193945680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928245414296966580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcb614e55aca34d418354f100369d6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mOutlineMat_: {fileID: 2100000, guid: df058c5ac0133774b8cbabeaf56f0e6e, type: 2}
+  outlineScaleFac_: 1
+  mColor_: {r: 0.044544328, g: 0.80931795, b: 0.8584906, a: 0}
+--- !u!64 &1556610231521855840
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928245414296966580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3259680403893553958, guid: 79d15eb7b79b2ec479d63a3aedce5fe3, type: 3}
+--- !u!114 &1831410465507363305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928245414296966580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2605ee4e53e7e542b688f66a9aed591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9113647447454134619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928245414296966580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a86eace9190f34f80abd3e247ed12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3743611881890494389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -747,6 +804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4aa0c6b411e9b41b5b37a9eaef760a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movers: []
+  rotators: []
   lightSol: {fileID: 4957588219145570471}
   colorLights:
   - {fileID: 7328323605484146840}
