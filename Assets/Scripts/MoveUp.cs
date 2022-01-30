@@ -9,7 +9,8 @@ public class MoveUp : MonoBehaviour
     void Update()
     {
         if(transform.position.y<limit)
-        transform.Translate(new Vector3(0,speed*Time.deltaTime, 0));
-        
+        transform.Translate(new Vector3(0,speed*Time.deltaTime, 0));   
     }
+
+
 }

@@ -396,7 +396,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5e74335b412fccc46a0884cd57030a4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5337a459c817c59498c1657eee5ebfb2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f09efe942fdb073479ee5ce9d8ce8804, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b3cff904057581489b6485337eed77c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -500,6 +500,7 @@ GameObject:
   - component: {fileID: 460350714}
   - component: {fileID: 460350713}
   - component: {fileID: 460350712}
+  - component: {fileID: 460350715}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -507,14 +508,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &460350712
-AudioListener:
+--- !u!114 &460350712
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460350711}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de430d1664fbc1f439351b64bbd42b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!20 &460350713
 Camera:
   m_ObjectHideFlags: 0
@@ -572,6 +579,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &460350715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460350711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959a40c60b54ab440af4aa3290c0bf12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 433017064
+      Data2: 1089216753
+      Data3: 188467643
+      Data4: 1006090025
+    Path: event:/MainMenuOST
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &509207604
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,7 +925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fce1539be8e4d7d4bb74f1c160e72a2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67a27e6b08589f8479fa0f1ca7535f45, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -918,6 +955,7 @@ GameObject:
   - component: {fileID: 1970258873}
   - component: {fileID: 1970258872}
   - component: {fileID: 1970258871}
+  - component: {fileID: 1970258874}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1020,7 +1058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 229f2398f1f33fa489bdb76e595d729b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 03989262097531a4aa142fd2c7ded7d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1038,6 +1076,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970258869}
   m_CullTransparentMesh: 1
+--- !u!114 &1970258874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970258869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959a40c60b54ab440af4aa3290c0bf12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1199918438
+      Data2: 1138377878
+      Data3: -847496298
+      Data4: 156143101
+    Path: event:/MainMenuButtons
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: Status
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &6302765066227941391
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f09efe942fdb073479ee5ce9d8ce8804, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8b3cff904057581489b6485337eed77c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 98b8fd4c7c55de84ea333db2ceb2f20c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d7abd6472ea9d140a6b224942a53805, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -682,14 +682,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &971459277
-AudioListener:
+--- !u!114 &971459277
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971459276}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de430d1664fbc1f439351b64bbd42b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!20 &971459278
 Camera:
   m_ObjectHideFlags: 0
@@ -939,7 +945,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1093532302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f07ca00b54cca064fb88fadb7dcc3e67, type: 3}
+  m_Script: {fileID: 11500000, guid: 355e4fced598b1b418bbb6103c92593b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
