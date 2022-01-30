@@ -2,14 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
 public class GameManager : MonoBehaviour
 {
     InventoryManager mInventory_;
     UIManager mUIManager_;
-
-   private static GameManager instance;
+    public class LookSensitivityValue : UnityEvent<float>
+    {
+    }
+    private static GameManager instance;
     public static GameManager getInstance() {  return instance;}
     private int stage; //indice del nivel
+
+    //opciones de configuracion
+    float LookSensitivity = 1;
+    float MasterVolume = 1;
+    float FXVolume = 1;
+    float MusicVolume = 1;
+    bool fullScreen = false;
+    Resolution res = new Resolution( 1920, 1080 );
+    struct Resolution
+    {
+        int x, y;
+        public Resolution(int X, int Y)
+        {
+            x = X;y = Y;
+        }
+    }
+    public LookSensitivityValue SensValueEvent;
 
     void Awake()
     {
@@ -22,10 +43,12 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
 
         stage = 0;
+        SceneManager.activeSceneChanged += OnSceneChanged;
+        SensValueEvent = new LookSensitivityValue();
     }
     
     public void setUI(UIManager ui){
-        mUIManager_=ui;
+        mUIManager_ = ui;
         mUIManager_.init();
     }
 
@@ -55,7 +78,45 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
-    public void QuitApp(){
+    public void QuitApp() {
         Application.Quit();
+    }
+    private void OnSceneChanged(Scene current, Scene next)
+    {
+        UpdateAllConfigOptions();
+    }
+
+    public void UpdateAllConfigOptions()
+    {
+        setFullScreen(fullScreen);
+        SetMasterVolume(MasterVolume);
+        SetFXVolume(FXVolume);
+        SetMusicVolume(MusicVolume);
+        SetLookSensitivity(LookSensitivity);
+    }
+
+    public void setFullScreen(bool fullscreen)
+    {
+        fullScreen = fullscreen;
+        Screen.fullScreen = fullscreen;
+    }
+    public void SetMasterVolume(float volume)
+    {
+        MasterVolume = volume;
+    }
+
+    public void SetFXVolume(float volume)
+    {
+        FXVolume = volume;
+    }
+    public void SetMusicVolume(float volume)
+    {
+        MusicVolume = volume;
+    }
+
+    public void SetLookSensitivity(float sensitivity)
+    {
+        LookSensitivity = sensitivity;
+        SensValueEvent.Invoke(LookSensitivity);
     }
 }

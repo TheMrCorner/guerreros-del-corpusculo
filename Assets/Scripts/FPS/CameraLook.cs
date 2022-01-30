@@ -9,6 +9,8 @@ namespace FPS
         [Header("Configuration")]
         public Transform playerBody;
         public float mouseSensitivity = 100f;
+        public float minSensitivity = 10f;
+        public float maxSensitivity = 1000f;
         #endregion
 
         #region Private
@@ -20,6 +22,10 @@ namespace FPS
 
         #region Logic
         // Start is called before the first frame update
+        private void Awake()
+        {
+            GameManager.getInstance().SensValueEvent.AddListener(setMouseSensitivity);
+        }
         void Start()
         {
             ManageInventory(false);
@@ -56,6 +62,12 @@ namespace FPS
                 _isInventory = false;
             } // else
         } // ManageInventory
+
+        public void setMouseSensitivity(float mouseSens)
+        {
+            print("sensitivity set");
+            mouseSensitivity = (maxSensitivity - minSensitivity) * mouseSens + minSensitivity;
+        }
         #endregion
     } // CameraLook
 } // namespace
