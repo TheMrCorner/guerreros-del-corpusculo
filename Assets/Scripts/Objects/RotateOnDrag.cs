@@ -14,16 +14,17 @@ public class RotateOnDrag : MonoBehaviour
     }
 
     // actualiza el vector auxiliar y el offset 
-   private void OnMouseDrag() {
+    private void OnMouseDrag() {
 
         if (!this.gameObject.GetComponent<DragOnClick>().enabled) {
             screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
             rotateAxis = gameObject.transform.position - Camera.main.transform.position;
 
             if (gameObject.transform.position.x < Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)));
-                transform.Rotate(rotateAxis, 1f);
+                transform.rotation = Quaternion.Euler(rotateAxis.Normalize()) * Vector3.forward;
             else
-                transform.Rotate(rotateAxis, -1f);
+                transform.rotation = Quaternion.Euler(rotateAxis.Normalize()) * Vector3.back;
+                //transform.Rotate(rotateAxis, -1f);
 
             correctPosition.checkPosition();
         }
