@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5207774836094814433}
   - component: {fileID: 9217285184803129156}
   - component: {fileID: 6345175242179720078}
+  - component: {fileID: 410696670441116969}
   m_Layer: 0
   m_Name: Hab02
   m_TagString: Untagged
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &410696670441116969
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831917319369658971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7731156394347790283, guid: 5dfefaec528f3744ea387064f71477ff, type: 3}
