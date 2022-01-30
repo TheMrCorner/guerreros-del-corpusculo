@@ -17,10 +17,11 @@ public class RotateOnDrag : MonoBehaviour
    private void OnMouseDrag() {
 
         if (!this.gameObject.GetComponent<DragOnClick>().enabled) {
-                    screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-        transform.Rotate(offset, 0.1f);
-        correctPosition.checkPosition();
+            screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
+            //offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+            offset = gameObject.transform.position - Camera.main.transform.position;
+            transform.Rotate(offset, 1f);
+            correctPosition.checkPosition();
         }
     }
 }
