@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     InventoryManager mInventory_;
@@ -49,5 +49,13 @@ public class GameManager : MonoBehaviour
     }
     public string printInventory(){
        return mInventory_.print();
+    }
+
+    public void ChangeScene(string name){
+        SceneManager.LoadScene(name);
+    }
+
+    public void QuitApp(){
+        Application.Quit();
     }
 }
