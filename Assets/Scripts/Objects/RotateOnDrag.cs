@@ -10,7 +10,7 @@ public class RotateOnDrag : MonoBehaviour
 
     void Start()
     {
-        correctPosition = getComponent<CorrectPosition>();
+        correctPosition = GetComponent<CorrectPosition>();
     }
 
     // actualiza el vector auxiliar y el offset 

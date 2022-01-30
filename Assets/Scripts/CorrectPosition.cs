@@ -32,9 +32,7 @@ public class CorrectPosition : MonoBehaviour
                 return correct = true;
             }
         }
-        return correct = false;
-    }
 
-        return false;
+        return correct = false;
     }
 }
