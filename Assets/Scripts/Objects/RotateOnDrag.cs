@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotateOnDrag : MonoBehaviour
 {
     private Vector3 screenPoint;
-    private Vector3 offset;
+    private Vector3 rotateAxis;
     private CorrectPosition correctPosition;
 
     void Start()
@@ -18,9 +18,13 @@ public class RotateOnDrag : MonoBehaviour
 
         if (!this.gameObject.GetComponent<DragOnClick>().enabled) {
             screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
-            //offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-            offset = gameObject.transform.position - Camera.main.transform.position;
-            transform.Rotate(offset, 1f);
+            rotateAxis = gameObject.transform.position - Camera.main.transform.position;
+
+            if (gameObject.transform.position.x < Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 0)));
+                transform.Rotate(rotateAxis, 1f);
+            else
+                transform.Rotate(rotateAxis, -1f);
+
             correctPosition.checkPosition();
         }
     }
