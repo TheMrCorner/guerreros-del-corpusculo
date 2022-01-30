@@ -38,17 +38,20 @@ public class ChangeLights : MonoBehaviour
 
             if (lightSol.enabled)
             {
-                foreach (RotateOnDrag rotator in rotators)
-                    rotator.enabled = true;
-                foreach (DragOnClick mover in movers)
-                    mover.enabled = false;
+                for (int i = 0; i < movers.Length; i++)
+                {
+                    rotators[i].enabled = true;
+                    movers[i].enabled = false;
+                }
             }
+
             else
             {
-                foreach (RotateOnDrag rotator in rotators)
-                    rotator.enabled = false;
-                foreach (DragOnClick mover in movers)
-                    mover.enabled = true;
+                for (int i = 0; i < movers.Length; i++)
+                {
+                    rotators[i].enabled = false;
+                    movers[i].enabled = true; 
+                }
             }
         }
     }

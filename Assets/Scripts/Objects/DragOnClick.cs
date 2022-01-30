@@ -16,8 +16,12 @@ public class DragOnClick : MonoBehaviour
 
     // actualiza la posicion del objetos
    void OnMouseDrag(){
-		Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-		Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
-		transform.position = cursorPosition;
+
+        if (!this.gameObject.GetComponent<RotateOnDrag>().enabled)
+        {
+            Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+            Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
+            transform.position = cursorPosition;
+        }
 	}
 }

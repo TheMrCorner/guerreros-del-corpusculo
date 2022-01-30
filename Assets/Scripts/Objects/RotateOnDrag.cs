@@ -9,8 +9,11 @@ public class RotateOnDrag : MonoBehaviour
 
     // actualiza el vector auxiliar y el offset 
    private void OnMouseDrag() {
-        screenPoint= Camera.main.WorldToScreenPoint(gameObject.transform.position);
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-        transform.Rotate(offset, 0.1f);
+
+        if (!this.gameObject.GetComponent<DragOnClick>().enabled) {
+            screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+            offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+            transform.Rotate(offset, 0.1f);
+        }
     }
 }

@@ -29,12 +29,7 @@ public class CorrectPosition : MonoBehaviour
                 Quaternion.Angle(transform.rotation, t.rotation) < rotationLenience)
                 return true;
         }
-        return false;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return false;
     }
 }
