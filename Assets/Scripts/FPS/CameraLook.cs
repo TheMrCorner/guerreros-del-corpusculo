@@ -54,7 +54,7 @@ namespace FPS
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 _isInventory = false;
-            }
+            } // else
         } // ManageInventory
         #endregion
     } // CameraLook
