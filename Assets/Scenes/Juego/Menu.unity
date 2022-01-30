@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6302765066227941392}
+      - m_Target: {fileID: 5941270463063341201, guid: b9be5ccb202610742a72f3394fdd70c5, type: 3}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 5
@@ -373,7 +373,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: settings
+          m_StringArgument: ConfigMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &173016584
@@ -396,7 +396,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10c455de95aa6504a90d656382a1558b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e74335b412fccc46a0884cd57030a4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -448,7 +448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: 18}
   m_SizeDelta: {x: 58.50006, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332923869
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 217cefc9d44500649b7bae07284e453b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f09efe942fdb073479ee5ce9d8ce8804, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c37f75ddf1b321a42a152bb47d4e452f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fce1539be8e4d7d4bb74f1c160e72a2f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8450bbb51a40d7245ac24af7ed9b9fad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 229f2398f1f33fa489bdb76e595d729b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
